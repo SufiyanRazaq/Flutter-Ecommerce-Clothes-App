@@ -56,16 +56,12 @@ class _HomeState extends State<Home> {
                   fontSize: 26,
                 ),
               ).animate().fadeIn(duration: 800.ms).slideY(),
-
               const SizedBox(height: 8),
               Text(
                 "Handpicked collections just for you",
                 style: textTheme.bodyMedium?.copyWith(color: Colors.grey[600]),
               ).animate().fadeIn(duration: 1000.ms).slideY(),
-
               const SizedBox(height: 20),
-
-              // Categories Section
               Text(
                 "Browse by Category",
                 style: textTheme.headlineSmall?.copyWith(
@@ -74,7 +70,6 @@ class _HomeState extends State<Home> {
                   fontSize: 22,
                 ),
               ).animate().fadeIn(duration: 1200.ms).slideY(),
-
               const SizedBox(height: 10),
               SizedBox(
                 height: size.height * 0.18,
@@ -129,10 +124,7 @@ class _HomeState extends State<Home> {
                   },
                 ),
               ),
-
               const SizedBox(height: 25),
-
-              // Featured Products Section
               Text(
                 "Featured Products",
                 style: textTheme.headlineSmall?.copyWith(
@@ -141,7 +133,6 @@ class _HomeState extends State<Home> {
                   fontSize: 22,
                 ),
               ).animate().fadeIn(duration: 1500.ms).slideY(),
-
               const SizedBox(height: 10),
               SizedBox(
                 height: size.height * 0.5,
@@ -219,10 +210,7 @@ class _HomeState extends State<Home> {
                   },
                 ),
               ),
-
               const SizedBox(height: 25),
-
-              // Most Popular Products Section
               Text(
                 "Top Picks for You",
                 style: textTheme.headlineSmall?.copyWith(
@@ -231,7 +219,6 @@ class _HomeState extends State<Home> {
                   fontSize: 22,
                 ),
               ).animate().fadeIn(duration: 1800.ms).slideY(),
-
               const SizedBox(height: 10),
               GridView.builder(
                 physics: const BouncingScrollPhysics(),

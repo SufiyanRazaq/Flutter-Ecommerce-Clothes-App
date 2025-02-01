@@ -24,7 +24,6 @@ class _SearchState extends State<Search> {
     super.initState();
   }
 
-  // Searching Function for TextField
   onSearch(String search) {
     setState(() {
       itemsOnSearch = mainList
@@ -47,7 +46,6 @@ class _SearchState extends State<Search> {
           child: Column(
             children: [
               const SizedBox(height: 40),
-              // Search Box
               FadeInUp(
                 delay: const Duration(milliseconds: 50),
                 child: TextField(
@@ -88,8 +86,6 @@ class _SearchState extends State<Search> {
                 ),
               ),
               const SizedBox(height: 20),
-
-              // Main Item List For Searching
               Expanded(
                 child: itemsOnSearch.isNotEmpty
                     ? GridView.builder(

@@ -15,7 +15,6 @@ class Cart extends StatefulWidget {
 }
 
 class _CartState extends State<Cart> {
-  /// Calculate the Total Price
   double calculateTotalPrice() {
     double total = 0.0;
     if (itemsOnCart.isEmpty) return 0;
@@ -25,13 +24,11 @@ class _CartState extends State<Cart> {
     return total;
   }
 
-  /// Calculate Shipping
   double calculateShipping() {
     if (itemsOnCart.isEmpty) return 0.0;
     return itemsOnCart.length <= 4 ? 25.99 : 88.99;
   }
 
-  /// Calculate the Sub Total Price
   double calculateSubTotalPrice() {
     double subTotal = 0.0;
     if (itemsOnCart.isEmpty) return 0;
@@ -41,7 +38,6 @@ class _CartState extends State<Cart> {
     return subTotal - 160 < 0 ? 0 : subTotal - 160;
   }
 
-  /// delete function for cart
   void onDelete(BaseModel data) {
     setState(() {
       itemsOnCart.removeWhere((element) => element.id == data.id);
@@ -63,8 +59,6 @@ class _CartState extends State<Cart> {
               width: size.width,
               height: size.height * 0.6,
               child: itemsOnCart.isEmpty
-
-                  /// Empty Cart State
                   ? Column(
                       children: [
                         FadeInUp(
@@ -119,8 +113,6 @@ class _CartState extends State<Cart> {
                         ),
                       ],
                     )
-
-                  /// Items in Cart
                   : ListView.builder(
                       physics: const BouncingScrollPhysics(),
                       itemCount: itemsOnCart.length,
@@ -255,8 +247,6 @@ class _CartState extends State<Cart> {
                       },
                     ),
             ),
-
-            /// Bottom Summary Card
             Positioned(
               bottom: 0,
               child: Container(

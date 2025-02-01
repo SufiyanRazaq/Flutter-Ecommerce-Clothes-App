@@ -38,7 +38,6 @@ class _DetailsState extends State<Details> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            /// Top Image with Gradient
             Stack(
               children: [
                 Hero(
@@ -110,8 +109,6 @@ class _DetailsState extends State<Details> {
                 ),
               ],
             ),
-
-            /// Product Info Section
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -132,8 +129,6 @@ class _DetailsState extends State<Details> {
                     ),
                   ),
                   const SizedBox(height: 20),
-
-                  /// Size Selection
                   FadeInUp(
                     delay: const Duration(milliseconds: 400),
                     child: Text(
@@ -191,8 +186,6 @@ class _DetailsState extends State<Details> {
                       ),
                     ),
                   ),
-
-                  /// Color Selection
                   const SizedBox(height: 20),
                   FadeInUp(
                     delay: const Duration(milliseconds: 600),
@@ -238,8 +231,6 @@ class _DetailsState extends State<Details> {
                       ),
                     ),
                   ),
-
-                  /// Add to Cart Button
                   const SizedBox(height: 30),
                   FadeInUp(
                     delay: const Duration(milliseconds: 800),
